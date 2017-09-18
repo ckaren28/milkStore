@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import{ Link } from 'react-router-dom';
 
 class Header extends Component {
   render() {
@@ -10,10 +11,12 @@ class Header extends Component {
 
         <nav>
           <ul>
-            <li className="first"><a href="#"> Home </a></li>
-            <li><a href="#"> Products </a></li>
-            <li className="last"><a href="#"> Contact </a></li>
-            </ul>
+            <li className="first"><Link to="/"> Home </Link></li>
+            // eslint-disable-next-line
+            <li><Link to="/Products"> Products </Link></li>
+            // eslint-disable-next-line
+            <li className="last"><Link to="/"> Contact </Link></li>
+          </ul>
         </nav>
 
 
