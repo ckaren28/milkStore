@@ -4,9 +4,10 @@ header{
   position: relative;
   display: block;
   width: 100%;
-  height: 90px;
-  background: $black;
-  color: $white;
+  height: 50px;
+  background: $white;
+  color: $black;
+  border-bottom: 1px solid grey;
 
   .logo{
     position: absolute;
@@ -25,6 +26,7 @@ header{
     position: absolute;
     top: 50%; right: 15px;
     @include translateY(-50%);
+
   }
 
     ul li{

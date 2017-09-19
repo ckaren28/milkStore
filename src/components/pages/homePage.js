@@ -5,7 +5,7 @@ class Homepage extends Component {
     return (
       <div className="container-fluid">
 
-        <h1>hi, homepage content here.</h1>
+        <h1>hello.</h1>
 
 
       </div>

@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
+
 import{ Link } from 'react-router-dom';
+var FA = require('react-fontawesome');
+
+
 
 class Header extends Component {
   render() {
@@ -12,10 +16,10 @@ class Header extends Component {
         <nav>
           <ul>
             <li className="first"><Link to="/"> Home </Link></li>
-            // eslint-disable-next-line
             <li><Link to="/Products"> Products </Link></li>
-            // eslint-disable-next-line
-            <li className="last"><Link to="/"> Contact </Link></li>
+            <li><Link to="/Cart"><FA name='shopping-bag' /></Link></li>
+
+            <li className="last"><Link to="/Cart"> Contact </Link></li>
           </ul>
         </nav>
 
