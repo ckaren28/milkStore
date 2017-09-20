@@ -5,6 +5,13 @@ class Products extends Component {
     return (
 
       <div className="container-fluid products">
+
+        <div className="row">
+          <div className="banner">
+              MILKS.
+          </div>
+        </div>
+
         <div className="row">
           <div className="col-xs-3 each">
             1

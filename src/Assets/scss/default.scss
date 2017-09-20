@@ -52,13 +52,25 @@ header{
 }
 
 .products{
-  width: 80%;
-  margin: 15%;
+  width: 75%;
+  max-width: 1000px;
+  margin: 0 auto;
+
+  .banner{
+    width: auto;
+    height: 300px;
+    background: $black;
+    color: $white;
+    margin: 20px;
+    max-width: 1000px;
+    margin-left: 0;
+  }
+
 
 
   .each{
     width: 200px;
-    height: 200px;
+    height: 300px;
     border: solid 1px;
     margin: 5px;
   }
