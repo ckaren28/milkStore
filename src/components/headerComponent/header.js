@@ -10,19 +10,18 @@ class Header extends Component {
     return (
       <header>
         <div className="logo">
-          LOGO
+          <Link to="/"> LOGO </Link>
         </div>
 
         <nav>
           <ul>
-            <li className="first"><Link to="/"> Home </Link></li>
-            <li><Link to="/Products"> Products </Link></li>
-            <li><Link to="/Cart"><FA name='shopping-bag' /></Link></li>
-
-            <li className="last"><Link to="/Cart"> Contact </Link></li>
+            <li>
+              <Link to="/Products"> Products </Link></li>
+            <li>
+              <Link to="/Cart">  </Link></li>
+            <li className="last"> <Link to="/Cart"> <FA name='shopping-bag' /> </Link></li>
           </ul>
         </nav>
-
 
       </header>
     );
