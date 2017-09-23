@@ -4,7 +4,7 @@ class Products extends Component {
   render() {
     return (
 
-      <div className="container-fluid products">
+      <div className="container products">
 
         <div className="row">
           <div className="banner">
@@ -13,34 +13,34 @@ class Products extends Component {
         </div>
 
         <div className="row">
-          <div className="col-xs-3 each">
+          <div className="col-xs-12 col-sm-6 col-md-3 each">
             1
           </div>
 
-          <div className="col-xs-3 each">
+          <div className="col-xs-12 col-sm-6 col-md-3 each">
             2
           </div>
 
-          <div className="col-xs-3 each">
+          <div className="col-xs-12 col-sm-6 col-md-3 each">
             3
           </div>
 
-          <div className="col-xs-3 each">
+          <div className="col-xs-12 col-sm-6 col-md-3 each">
             4
           </div>
-          <div className="col-xs-3 each">
+          <div className="col-xs-12 col-sm-6 col-md-3 each">
             5
           </div>
 
-          <div className="col-xs-3 each">
+          <div className="col-xs-12 col-sm-6 col-md-3 each">
             6
           </div>
 
-          <div className="col-xs-3 each">
+          <div className="col-xs-12 col-sm-6 col-md-3 each">
             7
           </div>
 
-          <div className="col-xs-3 each">
+          <div className="col-xs-12 col-sm-6 col-md-3 each">
             8
           </div>
         </div>
