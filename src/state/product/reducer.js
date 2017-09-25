@@ -5,7 +5,9 @@ import {
 } from '../actionTypes';
 
 const initialState = {
-  isLoading: false
+  isLoading: true,
+  products: [],
+  error: null,
 };
 
 export default (state = initialState, action) => {
@@ -27,6 +29,7 @@ export default (state = initialState, action) => {
     case FETCH_PRODUCTS_FAILURE:
       return{
         ...state,
+        isLoading: false,
         error: action.error,
       };
 

@@ -7,7 +7,10 @@ import * as productApi from '../../libs/product/api';
 
 export function* fetchProducts(action){
   try{
+
     const products = yield call( productApi.fetchAll);
+    console.log('products', products);
+    
     yield put(fetchProductsSuccess(products));
   } catch(error){
     yield put(fetchProductsFailure(error));

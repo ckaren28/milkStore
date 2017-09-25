@@ -1,4 +1,4 @@
-import productSagas from './products/sagas';
+import productSagas from './product/sagas';
 
 export default [
   productSagas,

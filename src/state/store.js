@@ -13,7 +13,7 @@ export default () => {
 
   const store = createStore(
     reducer,
-    this.state,
+    // this.state,
     enhancers
   );
 
