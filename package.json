@@ -13,9 +13,13 @@
     "react-dom": "^15.6.1",
     "react-fontawesome": "^1.6.1",
     "react-motion": "https://unpkg.com/react-motion/bower.zip",
+    "react-redux": "^5.0.6",
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.0.13",
-    "react-shopping-cart": "^1.7.2"
+    "react-shopping-cart": "^1.7.2",
+    "react-shopping-cart-starter-kit": "^0.1.0",
+    "redux": "^3.7.2",
+    "redux-saga": "^0.15.6"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -32,10 +36,16 @@
     "gulp-changed": "^3.1.0"
   },
   "presets": [
-    ["env", {
-      "targets": {
-        "browsers": ["last 2 versions", "safari >= 7"]
+    [
+      "env",
+      {
+        "targets": {
+          "browsers": [
+            "last 2 versions",
+            "safari >= 7"
+          ]
+        }
       }
-    }]
+    ]
   ]
 }

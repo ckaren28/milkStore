@@ -1,5 +1,14 @@
 import React, { Component } from 'react';
 
+const myProducts = {
+  "product-1" : { "Name" : "Canned Unicorn Meat",   "Price" : "9.99"  },
+  "product-2" : { "Name" : "Disappearing Ink Pen",  "Price" : "14.99" },
+  "product-3" : { "Name" : "USB Rocket Launcher",   "Price" : "29.99" },
+  "product-4" : { "Name" : "Airzooka Air Gun",      "Price" : "29.99" },
+  "product-5" : { "Name" : "Star Trek Paper Clips", "Price" : "19.99" }
+};
+
+
 class Products extends Component {
   render() {
     return (
