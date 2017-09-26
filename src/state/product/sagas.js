@@ -10,13 +10,12 @@ export function* fetchProducts(action){
 
     const products = yield call( productApi.fetchAll);
     console.log('products', products);
-    
+
     yield put(fetchProductsSuccess(products));
   } catch(error){
     yield put(fetchProductsFailure(error));
   }
 }
-
 
 export function* watchFetchProducts(){
   yield takeLatest(FETCH_PRODUCTS, fetchProducts);

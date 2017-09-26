@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import{ connect } from 'react-redux';
-import {fetchProducts} from './state/products/actions';
+import ProductGrid from './components/ProductGrid';
+import Cart from './components/cartComponent';
+import {fetchProducts} from './state/product/actions';
+import { fetchCart } from './state/cart/actions';
 
 
 // Includes
@@ -13,21 +16,32 @@ class App extends Component {
 
   render() {
     const{
+      isProductsLoading,
       products,
+      cart,
     } = this.props;
 
+    if (isProductsLoading){
+      return <h2>Loading ...</h2>;
+    }
 
     return (
       <div>
-        <h1> shop </h1>
-        {products.map(product => <h2>{product.name} </h2>)}
+        <h1> Shoppe </h1>
+        <ProductGrid
+          products = {products}
+        />
+        <h1> Cart </h1>
+        <Cart cart={cart} />
       </div>
     );
   }
 }
 
 const mapStateToProps = (state) => ({
+  isProductsLoading: state.product.isLoading,
   products: state.product.products,
+  cart: state.cart.cart,
 });
 
 const mapDispatchToProps = {

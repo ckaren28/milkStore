@@ -4,20 +4,18 @@ import {Provider} from 'react-redux';
 import App from './App';
 import configureStore from './state/store';
 import registerServiceWorker from './registerServiceWorker';
-import {fetchProducts} from './state/product/actions';
-
+import {fetchCart} from './state/cart/actions';
 
 const store = configureStore({  });
 
-
-store.dispatch(fetchProducts());
+store.dispatch(fetchCart() )
 
 ReactDOM.render(
   <Provider store={store}>
     <App />
   </Provider>,
 
-  document.querySelector('#root')
-)
+  document.getElementById('root')
+);
 
 registerServiceWorker();

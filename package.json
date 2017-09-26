@@ -19,7 +19,8 @@
     "react-shopping-cart": "^1.7.2",
     "react-shopping-cart-starter-kit": "^0.1.0",
     "redux": "^3.7.2",
-    "redux-saga": "^0.15.6"
+    "redux-saga": "^0.15.6",
+    "styled-components": "^2.1.2"
   },
   "scripts": {
     "start": "react-scripts start",
