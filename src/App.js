@@ -38,7 +38,7 @@ class App extends Component {
           addToCart = {this.addToCart}
         />
         <h1> Cart </h1>
-        <cartTable cart={cart}  />
+        <cartTable cart = { cart }  />
       </div>
     );
   }
