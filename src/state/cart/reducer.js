@@ -9,7 +9,7 @@ import {
 
 const initialState = {
    isLoading: false,
-   cart: { items: []},
+   cart: { items: [] },
    error: null,
 };
 

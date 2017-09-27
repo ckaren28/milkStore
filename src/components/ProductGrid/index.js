@@ -21,7 +21,7 @@ const ProductName = styled.div`
   margin: 10px 0;
 `;
 
-const ProductGrid = ({products}) => (
+const ProductGrid = ({products, addToCart}) => (
   <Wrapper>
     {products.map(product => (
       <ProductWrapper key={product._id}>
@@ -31,6 +31,9 @@ const ProductGrid = ({products}) => (
         <ProductName>
           {product.name}
         </ProductName>
+        <button onClick={() => addToCart(product)}>
+          Add
+        </button>
       </ProductWrapper>
     ))}
   </Wrapper>
@@ -42,6 +45,7 @@ ProductGrid.propTypes = {
     picture: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
   })).isRequired,
+  addToCart: PropTypes.func.isRequired,
 };
 
 export default ProductGrid;

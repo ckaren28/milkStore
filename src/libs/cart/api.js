@@ -10,7 +10,7 @@ const getFromLocalStorage = () => {
 
 export const fetch = async () => getFromLocalStorage();
 
-export const addToCart = async (productId, quantity =1) => {
+export const addToCart = async (productId, quantity = 1) => {
   const cart = await fetch();
   const exists = cart.items.findIndex(item => item.productId === productId) > -1;
 
@@ -19,6 +19,7 @@ export const addToCart = async (productId, quantity =1) => {
   }
 
   const newItem = {productId, quantity};
+
   const newCart = {
     ...cart,
     items:[

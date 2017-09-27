@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import{ connect } from 'react-redux';
 import ProductGrid from './components/ProductGrid';
-import Cart from './components/cartComponent';
+import cartTable from './components/cartComponent';
 import {fetchProducts} from './state/product/actions';
-import { fetchCart } from './state/cart/actions';
+import { fetchCart, addToCart } from './state/cart/actions';
 
 
 // Includes
@@ -14,6 +14,11 @@ class App extends Component {
     this.props.fetchProducts();
   }
 
+  addToCart = (product) => {
+    this.props.addToCart(product._id, 1);
+    console.log("product", product);
+  }
+
   render() {
     const{
       isProductsLoading,
@@ -22,7 +27,7 @@ class App extends Component {
     } = this.props;
 
     if (isProductsLoading){
-      return <h2>Loading ...</h2>;
+      return <h2>Loading... </h2>;
     }
 
     return (
@@ -30,22 +35,36 @@ class App extends Component {
         <h1> Shoppe </h1>
         <ProductGrid
           products = {products}
+          addToCart = {this.addToCart}
         />
         <h1> Cart </h1>
-        <Cart cart={cart} />
+        <cartTable cart={cart}  />
       </div>
     );
   }
 }
 
+
+const getProductById = (products, productId) => products.find( p => p._id === productId);
+
+const populateCartItems = (cart, products) => ({
+  ...cart,
+  items: cart.items.map(item => ({
+    ...item,
+    product: getProductById(products, item.productId),
+  })),
+});
+
 const mapStateToProps = (state) => ({
   isProductsLoading: state.product.isLoading,
   products: state.product.products,
-  cart: state.cart.cart,
+  cart: populateCartItems(state.cart.cart, state.product.products),
 });
 
 const mapDispatchToProps = {
   fetchProducts,
+  fetchCart,
+  addToCart,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
