@@ -14,7 +14,6 @@ const ProductWrapper = styled.div`
 `;
 
 const ProductImage = styled.img`
-  width: 100%;
 `;
 
 const ProductName = styled.div`
@@ -31,7 +30,7 @@ const ProductGrid = ({products, addToCart}) => (
         <ProductName>
           {product.name}
         </ProductName>
-        <button onClick={() => addToCart(product)}>
+        <button onClick={() => addToCart(product)} >
           Add To Cart
         </button>
       </ProductWrapper>

@@ -16,8 +16,11 @@ export const addToCart = async (productId, quantity = 1) => {
   const cart = await fetch();
   const exists = cart.items.findIndex(item => item.productId === productId) > -1
 
+
   if(exists){
-    throw { message: "Item already exists"};
+    const i = cart.items.findIndex(item => item.productId === productId);
+    console.log('cart', cart);
+    cart.items[i].quantity += 1;
   }
 
   const newItem = { productId, quantity };
@@ -31,6 +34,6 @@ export const addToCart = async (productId, quantity = 1) => {
   };
 
   saveToLocalStorage(newCart);
-  
+
   return newCart;
 }
