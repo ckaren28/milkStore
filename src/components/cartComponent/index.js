@@ -18,7 +18,7 @@ const Wrapper = styled.table `
   }
 `;
 
-const cartTable = ({ cart }) => (
+const CartTable = ({ cart }) => (
   <Wrapper>
     <thead>
       <tr>
@@ -39,7 +39,7 @@ const cartTable = ({ cart }) => (
   </Wrapper>
 );
 
-cartTable.propTypes = {
+CartTable.propTypes = {
   cart: PropTypes.shape({
     items: PropTypes.arrayOf(PropTypes.shape({
       product: PropTypes.shape({
@@ -52,4 +52,4 @@ cartTable.propTypes = {
 }).isRequired,
 };
 
-export default cartTable;
+export default CartTable;

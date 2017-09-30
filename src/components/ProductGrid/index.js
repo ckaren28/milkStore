@@ -32,7 +32,7 @@ const ProductGrid = ({products, addToCart}) => (
           {product.name}
         </ProductName>
         <button onClick={() => addToCart(product)}>
-          Add
+          Add To Cart
         </button>
       </ProductWrapper>
     ))}

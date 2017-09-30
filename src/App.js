@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import{ connect } from 'react-redux';
 import ProductGrid from './components/ProductGrid';
-import cartTable from './components/cartComponent';
+import CartTable from './components/cartComponent';
 import {fetchProducts} from './state/product/actions';
 import { fetchCart, addToCart } from './state/cart/actions';
 
@@ -12,11 +12,12 @@ import './Assets/css/default.min.css';
 class App extends Component {
   componentWillMount(){
     this.props.fetchProducts();
+    this.props.fetchCart();
   }
 
   addToCart = (product) => {
+    console.log('product', product);
     this.props.addToCart(product._id, 1);
-    console.log("product", product);
   }
 
   render() {
@@ -26,9 +27,11 @@ class App extends Component {
       cart,
     } = this.props;
 
+
     if (isProductsLoading){
       return <h2>Loading... </h2>;
     }
+
 
     return (
       <div>
@@ -38,7 +41,9 @@ class App extends Component {
           addToCart = {this.addToCart}
         />
         <h1> Cart </h1>
-        <cartTable cart = { cart }  />
+        <CartTable
+          cart = { cart }
+          />
       </div>
     );
   }

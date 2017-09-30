@@ -15,7 +15,6 @@ const initialState = {
 
 export default(state = initialState, action) => {
   switch (action.type) {
-
     case FETCH_CART:
     case ADD_TO_CART:
       return{
@@ -39,9 +38,7 @@ export default(state = initialState, action) => {
         error: action.error,
       };
 
-
     default:
       return state;
-
   }
 }
